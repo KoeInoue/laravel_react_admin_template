@@ -66,6 +66,7 @@ $ yarn start
 ```
 
 Runs the app in development mode.  
+start building react app to /resources/views/app.blade.php.  
 Open http://localhost:3000 to view it in the browser.
 
 ### Executes Artisan Commands and Docker Commands
@@ -90,7 +91,7 @@ A consequence of this is that every time you build the React app the public fold
 
 For your convenience you will already find .htaccess and index.php in resources/react-app/public.
 
-⚠️ 注意 ⚠️
+⚠️ 注意 ⚠️  
 npm run build また、 yarn build の実行はオリジナルとの Create React App と同様です。
 唯一の違いはビルドフォルダーが Laravel の public フォルダー内になることです。
 つまり、laravel の public フォルダー内はすべて一度削除され resources/react-app/public を基に再生成されます。
