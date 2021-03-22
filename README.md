@@ -69,13 +69,23 @@ Runs the app in development mode.
 start building react app to /resources/views/app.blade.php.  
 Open http://localhost:3000 to view it in the browser.
 
-### Executes Artisan Commands and Docker Commands
+### Execute Artisan Commands and Docker Commands
 
 ```
 $ make migrate
 ```
 
 see [./Makefile](https://github.com/KoeInoue/laravel_react_admin_template/blob/main/Makefile) to look more commands.
+
+### eslint
+
+Run eslint check.
+
+```
+$ yarn lint
+```
+
+you can change your own rules in [./.eslint.js](https://github.com/KoeInoue/laravel_react_admin_template/blob/main/.eslintrc.js)
 
 ## Production Build
 
