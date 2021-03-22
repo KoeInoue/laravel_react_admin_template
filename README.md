@@ -12,17 +12,26 @@ This project’s frontend was bootstrapped with [Create React App Laravel](https
 
 ## Features
 
-- Laravel
+### backend
+
 - Docker
+- Laravel
+
+### frontend
+
 - React (without jQuery etc.)
-- TypeScript
-- eslint
-- makefile
 - React Hooks
 - Redux
-- Responsive (adjusted to mobile devices)
 - React-router-dom
+- TypeScript
+- ESlint
+- Prettier
+- Makefile
 - Bootstrap 4
+
+### features
+
+- Responsive (adjusted to mobile devices)
 - Modern, clean, readable layout
 - Authentication
 - Clean, easy, ready to start new project
@@ -42,7 +51,7 @@ $ cd laravel_react_admin_template
 $ make init
 ```
 
-this executes these commands.
+this executes these commands.  
 `docker-compose up -d --build`  
 `docker-compose exec app composer install`  
 `docker-compose exec app cp .env.example .env`  
@@ -81,6 +90,7 @@ A consequence of this is that every time you build the React app the public fold
 
 For your convenience you will already find .htaccess and index.php in resources/react-app/public.
 
+⚠️ 注意 ⚠️
 npm run build また、 yarn build の実行はオリジナルとの Create React App と同様です。
 唯一の違いはビルドフォルダーが Laravel の public フォルダー内になることです。
 つまり、laravel の public フォルダー内はすべて一度削除され resources/react-app/public を基に再生成されます。
