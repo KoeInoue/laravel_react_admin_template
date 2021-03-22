@@ -1,12 +1,10 @@
 module.exports = {
-  // root: true,
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 2018,
     ecmaFeatures: {
       jsx: true,
     },
-    // import 文でモジュールを使用します
     sourceType: 'module',
   },
   env: {
@@ -31,12 +29,12 @@ module.exports = {
     },
   },
   rules: {
-    'react/prop-types': 'off', // TypeScirpt なので prop-types は要らない
-    'no-console': 'warn', // console.log()の使用について 消し忘れ防止の為warnに
-    'no-unused-vars': 'off', // 使われていない変数について
-    camelcase: 'warn', // camelcaseについて
-    'no-undef': 'off', // 宣言されていない変数を禁止する
-    'no-irregular-whitespace': 'warn', // イレギュラーな空白
+    'react/prop-types': 'off', //not required prop-types cause use typescript
+    'no-console': 'warn', // to prevent forgetting to erase console.log()
+    'no-unused-vars': 'off', // unused variables
+    camelcase: 'warn', // camelcase
+    'no-undef': 'off', // undefined variables
+    'no-irregular-whitespace': 'warn', // irregular
 
     // These rules relate to ES6, also known as ES2015
     'arrow-parens': 'error', // require parentheses around arrow function arguments
@@ -57,7 +55,7 @@ module.exports = {
     'template-curly-spacing': 'error', // require or disallow spacing around embedded expressions of template strings
     'yield-star-spacing': 'error', // require or disallow spacing around the `*` in `yield*` expressions
 
-    // この先はPrettierのルール
+    // Prettier rules below
     'prettier/prettier': [
       'error',
       {
