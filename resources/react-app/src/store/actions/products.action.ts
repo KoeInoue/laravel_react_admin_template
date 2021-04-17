@@ -8,23 +8,23 @@ export const CLEAR_PRODUCT_PENDING_EDIT = 'CLEAR_PRODUCT_PENDING_EDIT';
 export const SET_MODIFICATION_STATE = 'SET_MODIFICATION_STATE';
 
 export function addProduct(product: IProduct): IAddProductActionType {
-  return { type: ADD_PRODUCT, product: product };
+  return { type: ADD_PRODUCT, product };
 }
 
 export function editProduct(product: IProduct): IEditProductActionType {
-  return { type: EDIT_PRODUCT, product: product };
+  return { type: EDIT_PRODUCT, product };
 }
 
 export function removeProduct(id: number): IRemoveProductActionType {
-  return { type: REMOVE_PRODUCT, id: id };
+  return { type: REMOVE_PRODUCT, id };
 }
 
 export function changeProductAmount(id: number, amount: number): IChangeProductAmountType {
-  return { type: CHANGE_PRODUCT_AMOUNT, id: id, amount: amount };
+  return { type: CHANGE_PRODUCT_AMOUNT, id, amount };
 }
 
 export function changeSelectedProduct(product: IProduct): IChangeSelectedProductActionType {
-  return { type: CHANGE_PRODUCT_PENDING_EDIT, product: product };
+  return { type: CHANGE_PRODUCT_PENDING_EDIT, product };
 }
 
 export function clearSelectedProduct(): IClearSelectedProductActionType {
@@ -32,7 +32,7 @@ export function clearSelectedProduct(): IClearSelectedProductActionType {
 }
 
 export function setModificationState(value: ProductModificationStatus): ISetModificationStateActionType {
-  return { type: SET_MODIFICATION_STATE, value: value };
+  return { type: SET_MODIFICATION_STATE, value };
 }
 
 interface IAddProductActionType {

@@ -65,23 +65,18 @@ const initialState: IProductState = {
 function productsReducer(state: IProductState = initialState, action: IActionBase): IProductState {
   switch (action.type) {
     case ADD_PRODUCT: {
-      const maxId: number = Math.max.apply(
-        Math,
-        state.products.map(function (o) {
-          return o.id;
-        }),
-      );
+      const maxId: number = Math.max(...state.products.map((o) => o.id));
       action.product.id = maxId + 1;
       return { ...state, products: [...state.products, action.product] };
     }
     case EDIT_PRODUCT: {
-      const foundIndex: number = state.products.findIndex(pr => pr.id === action.product.id);
+      const foundIndex: number = state.products.findIndex((pr) => pr.id === action.product.id);
       const products: IProduct[] = state.products;
       products[foundIndex] = action.product;
-      return { ...state, products: products };
+      return { ...state, products };
     }
     case REMOVE_PRODUCT: {
-      return { ...state, products: state.products.filter(pr => pr.id !== action.id) };
+      return { ...state, products: state.products.filter((pr) => pr.id !== action.id) };
     }
     case CHANGE_PRODUCT_PENDING_EDIT: {
       return { ...state, selectedProduct: action.product };
@@ -93,10 +88,10 @@ function productsReducer(state: IProductState = initialState, action: IActionBas
       return { ...state, modificationState: action.value };
     }
     case CHANGE_PRODUCT_AMOUNT: {
-      const foundIndex: number = state.products.findIndex(pr => pr.id === action.id);
+      const foundIndex: number = state.products.findIndex((pr) => pr.id === action.id);
       const products: IProduct[] = state.products;
       products[foundIndex].amount = products[foundIndex].amount - action.amount;
-      return { ...state, products: products };
+      return { ...state, products };
     }
     default:
       return state;

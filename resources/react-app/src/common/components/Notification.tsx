@@ -12,7 +12,7 @@ const Notifications: React.FC = () => {
     dispatch(removeNotification(id));
   }
 
-  const notificationList = notifications.map(notification => {
+  const notificationList = notifications.map((notification) => {
     return (
       <div className="toast" key={`notification_${notification.id}`}>
         <div className="toast-header">

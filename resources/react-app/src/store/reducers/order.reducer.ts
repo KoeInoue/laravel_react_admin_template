@@ -39,12 +39,7 @@ const initialState: IOrdersState = {
 function orderReducer(state: IOrdersState = initialState, action: IActionBase): IOrdersState {
   switch (action.type) {
     case ADD_ORDER: {
-      let maxId: number = Math.max.apply(
-        Math,
-        state.orders.map(o => {
-          return o.id;
-        }),
-      );
+      let maxId: number = Math.max(...state.orders.map((o) => o.id));
       if (maxId === -Infinity) {
         maxId = 0;
       }

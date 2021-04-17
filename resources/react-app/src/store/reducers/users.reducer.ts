@@ -14,14 +14,14 @@ function userReducer(state: IUserState = initialState, action: IActionBase): IUs
     case ADD_ADMIN: {
       return {
         ...state,
-        users: state.users.filter(x => x.id !== action.user.id),
+        users: state.users.filter((x) => x.id !== action.user.id),
         admins: [...state.admins, action.user],
       };
     }
     case REMOVE_ADMIN: {
       return {
         ...state,
-        admins: state.admins.filter(x => x.id !== action.user.id),
+        admins: state.admins.filter((x) => x.id !== action.user.id),
         users: [...state.users, action.user],
       };
     }

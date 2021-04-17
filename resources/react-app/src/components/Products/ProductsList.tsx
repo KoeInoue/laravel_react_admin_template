@@ -11,7 +11,7 @@ export type productListProps = {
 function ProductList(props: productListProps): JSX.Element {
   const products: IProductState = useSelector((state: IStateType) => state.products);
 
-  const productElements: (JSX.Element | null)[] = products.products.map(product => {
+  const productElements: (JSX.Element | null)[] = products.products.map((product) => {
     if (!product) {
       return null;
     }

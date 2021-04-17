@@ -25,7 +25,7 @@ function NumberInput(props: NumberInputProps): JSX.Element {
           : ['', 'is-valid'];
     }
 
-    props.onChange({ value: elementValue, error: error, touched: touched, field: props.field });
+    props.onChange({ value: elementValue, error, touched, field: props.field });
 
     setTouch(true);
     setError(error);

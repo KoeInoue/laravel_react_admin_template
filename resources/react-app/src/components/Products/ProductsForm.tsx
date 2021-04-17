@@ -44,11 +44,11 @@ const ProductForm: React.FC = () => {
       return;
     }
 
-    const saveUserFn: Function = isCreate ? addProduct : editProduct;
+    const saveUserFn: any = isCreate ? addProduct : editProduct;
     saveForm(formState, saveUserFn);
   }
 
-  function saveForm(formState: IProductFormState, saveFn: Function): void {
+  function saveForm(formState: IProductFormState, saveFn: any): void {
     if (product) {
       dispatch(
         saveFn({

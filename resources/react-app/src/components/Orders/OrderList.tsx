@@ -6,7 +6,7 @@ import { IStateType } from '../../store/models/root.interface';
 const OrderList: React.FC = () => {
   const orders: IOrder[] = useSelector((state: IStateType) => state.orders.orders);
 
-  const orderList: JSX.Element[] = orders.map(order => {
+  const orderList: JSX.Element[] = orders.map((order) => {
     return (
       <tr className={`table-row`} key={`order_${order.id}`}>
         <th scope="row">{order.id}</th>

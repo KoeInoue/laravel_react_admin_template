@@ -21,7 +21,7 @@ const Users: React.FC = () => {
     dispatch(removeAdmin(admin));
   }
 
-  const userElements: JSX.Element[] = users.map(user => {
+  const userElements: JSX.Element[] = users.map((user) => {
     return (
       <tr className={`table-row`} key={`user_${user.id}`}>
         <th scope="row">{user.id}</th>
@@ -37,7 +37,7 @@ const Users: React.FC = () => {
     );
   });
 
-  const adminElements: JSX.Element[] = admins.map(admin => {
+  const adminElements: JSX.Element[] = admins.map((admin) => {
     return (
       <tr className={`table-row`} key={`user_${admin.id}`}>
         <th scope="row">{admin.id}</th>

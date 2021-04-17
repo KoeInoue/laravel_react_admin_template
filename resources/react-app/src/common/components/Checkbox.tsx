@@ -13,7 +13,7 @@ function Checkbox(props: CheckboxProps): JSX.Element {
     [error, validClass] =
       !elementValue && props.required ? ['Value has to be checked', 'is-invalid'] : ['', 'is-valid'];
 
-    props.onChange({ value: elementValue, error: error, touched: touched, field: props.field });
+    props.onChange({ value: elementValue, error, touched, field: props.field });
 
     setTouch(true);
     setError(error);

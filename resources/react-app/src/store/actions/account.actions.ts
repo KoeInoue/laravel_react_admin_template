@@ -2,7 +2,7 @@ export const LOG_IN = 'LOG_IN';
 export const LOG_OUT = 'LOG_OUT';
 
 export function login(email: string): ILogInActionType {
-  return { type: LOG_IN, email: email };
+  return { type: LOG_IN, email };
 }
 
 export function logout(): ILogOutActionType {

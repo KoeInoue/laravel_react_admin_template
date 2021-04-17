@@ -13,7 +13,7 @@ function SelectInput(props: SelectProps): JSX.Element {
     [error, validClass] =
       !elementValue && props.required ? ['Value has to be selected', 'is-invalid'] : ['', 'is-valid'];
 
-    props.onChange({ value: elementValue, error: error, touched: touched, field: props.field });
+    props.onChange({ value: elementValue, error, touched, field: props.field });
 
     setTouch(true);
     setError(error);
@@ -21,7 +21,7 @@ function SelectInput(props: SelectProps): JSX.Element {
     setValue(elementValue);
   }
 
-  const getOptions: (JSX.Element | null)[] = props.options.map(option => {
+  const getOptions: (JSX.Element | null)[] = props.options.map((option) => {
     return (
       <option key={option} value={`${option}`}>
         {option}
