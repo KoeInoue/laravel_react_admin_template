@@ -16,6 +16,7 @@ This project’s frontend was bootstrapped with [Create React App Laravel](https
 
 - Docker
 - Laravel
+- php cs (fixer)
 
 ### frontend
 
