@@ -46,6 +46,11 @@ $ git clone https://github.com/KoeInoue/laravel_react_admin_template.git
 $ cd laravel_react_admin_template
 ```
 
+### install packeges fron package.json
+```
+$ yarn install
+```
+
 ### Initialize and Start Server(nginx, php and mysql)
 
 ```
