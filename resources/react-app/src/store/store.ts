@@ -4,7 +4,5 @@ import rootReducers from './reducers/root.reducer';
 
 const store: Store = createStore(rootReducers, applyMiddleware(thunkMiddleware));
 
-store.subscribe(() => {
-  null;
-});
+store.subscribe(() => {});
 export default store;
